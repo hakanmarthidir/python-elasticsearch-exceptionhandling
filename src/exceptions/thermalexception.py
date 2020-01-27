@@ -7,5 +7,5 @@ class ThermalException(Exception):
         self.trackid = trackid
         self.message = message
         self.date = datetime.utcnow()
-        self.filename= filename
+        self.filename = filename
 

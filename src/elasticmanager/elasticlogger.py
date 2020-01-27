@@ -1,9 +1,10 @@
 import datetime
 from elasticsearch import Elasticsearch
 import json
+from src.elasticmanager.logger import Logger
 
 
-class ElasticLogger:
+class ElasticLogger(Logger):
 
     elastic = None
 
