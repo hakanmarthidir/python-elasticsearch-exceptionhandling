@@ -13,7 +13,7 @@ try:
     #a = 0
     #b = 3
     #c = b / a
-    raise ThermalOperationException(message="Error Message", operation="XX")
+    raise ThermalOperationException(message="Error Message", operation="XX", filename=os.path.basename(__file__))
 
 except ThermalException as a:
     print(a.operation)
@@ -22,4 +22,4 @@ except ThermalException as a:
     logger.write(a)
 
 except Exception as e:
-    logger.write(ThermalException(str(e), "BlaBla", os.path.basename(__file__), "Track-111" ))
+    logger.write(ThermalException(str(e), os.path.basename(__file__), "Track-111"))
